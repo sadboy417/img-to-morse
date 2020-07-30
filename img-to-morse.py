@@ -57,7 +57,7 @@ def translate_morse(inp):
                 out += k
     return out
 def main():
-    if len(sys.argv != 2):
+    if len(sys.argv) != 2:
         print('Usage: img-to-morse.py path/to/image.png')
         sys.exit()
 
