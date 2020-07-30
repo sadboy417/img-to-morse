@@ -2,7 +2,7 @@
 script to recognize morse code in pictures based on color values
 
 Required packages:
-######PIL: 
-'''
+###### PIL: 
+```
 pip3 install Pillow
-'''
+```
