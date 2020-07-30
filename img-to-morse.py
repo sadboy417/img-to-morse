@@ -1,3 +1,10 @@
+###############################################################################
+# SCRIPT THAT READS MORSE CODE FROM IMAGE, TOP TO BOTTOM, LEFT TO RIGHT       #
+#                                                                             #
+# Note: the script takes the top-left pixel as the reference point.           #
+#       It reads any different value as the letters. So it only works with    #
+#       2-color images. Only works with 1 pixel tall lines!                   #
+###############################################################################
 from PIL import Image
 import sys
 
@@ -49,5 +56,12 @@ def translate_morse(inp):
             if each == v:
                 out += k
     return out
+def main():
+    if len(sys.argv != 2):
+        print('Usage: img-to-morse.py path/to/image.png')
+        sys.exit()
 
-print(translate_morse(read_morse(sys.argv[1])))
+    print(translate_morse(read_morse(sys.argv[1])))
+
+if __name__ == '__main__':
+    main()
